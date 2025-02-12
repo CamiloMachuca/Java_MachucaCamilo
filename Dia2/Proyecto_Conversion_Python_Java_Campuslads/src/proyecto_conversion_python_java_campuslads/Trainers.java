@@ -21,18 +21,10 @@ public class Trainers {
         this.ruta=ruta;
         this.grupo=grupo;
     }
-    public void datosTrainers(){
-        System.out.println("id= "+id);
-        System.out.println("nombre= "+ nombre);
-        System.out.println("apellido= "+ apellido);
-        System.out.println("horario= "+ horario);
-        System.out.println("ruta= "+ ruta);
-        System.out.println("grupo= "+ grupo);
-    }
 
     @Override
     public String toString() {
-        return "Trainers{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", horario=" + horario + ", ruta=" + ruta + ", grupo=" + grupo + '}';
+        return "Trainers{" + "id=" + id + "\n nombre=" + nombre + "\n apellido=" + apellido + "\n horario=" + horario + "\n ruta=" + ruta + "\n grupo=" + grupo + '}';
     }
     
     

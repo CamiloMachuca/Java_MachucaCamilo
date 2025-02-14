@@ -3,6 +3,7 @@ package pruebajava;
 
 
 public class Concierto {
+    static int contenedorIdCon=0;
     int id;
     String nombre;
     String artista;
@@ -10,8 +11,13 @@ public class Concierto {
     String lugar;
     int precioBase;
     
-    public Concierto(int id,String nombre,String artista, String fecha,String lugar,int precioBase){
-        this.id=id;
+    Concierto(){
+        id++;
+    }
+    
+    public Concierto(String nombre,String artista, String fecha,String lugar,int precioBase){
+        contenedorIdCon++;
+        this.id=contenedorIdCon;
         this.nombre=nombre;
         this.artista=artista;
         this.fecha=fecha;
@@ -22,7 +28,7 @@ public class Concierto {
 
     @Override
     public String toString() {
-        return "Concierto{" + "id=" + id + ", nombre=" + nombre + ", artista=" + artista + ", fecha=" + fecha + ", lugar=" + lugar + ", precioBase=" + precioBase + '}';
+        return "Concierto{" + "\n id = " + id + "\n nombre = " + nombre + "\n artista = " + artista + "\n fecha = " + fecha + "\n lugar = " + lugar + "\n precioBase = " + precioBase + '}';
     }
     
     

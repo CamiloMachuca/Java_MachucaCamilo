@@ -9,14 +9,18 @@ package pruebajava;
  * @author Uniminuto Tibu
  */
 public class Cliente {
+    static int contadorId=0;
     int id;
     String nombre;
     String apellido;
     String correo;
     String telefono;
     
-    public Cliente(int id, String nombre, String apellido, String correo, String telefono){
-        this.id=id;
+   
+    
+    public Cliente( String nombre, String apellido, String correo, String telefono){
+        contadorId++;
+        this.id=contadorId;
         this.nombre=nombre;
         this.apellido=apellido;
         this.correo=correo;
@@ -26,7 +30,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo + ", telefono=" + telefono + '}';
+        return "Cliente{" + "\n id = " + id + "\n nombre = " + nombre + "\n apellido = " + apellido + "\n correo = " + correo + "\n telefono = " + telefono + '}';
     }
     
     

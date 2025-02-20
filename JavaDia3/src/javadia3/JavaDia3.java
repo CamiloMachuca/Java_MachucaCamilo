@@ -78,6 +78,7 @@ public class JavaDia3 {
         
         switch (opcion){
             case "1"://programa para imprimir todos los números naturales del 1 al n.
+                System.out.println("Ingrese un numero:");
                 int n =teclado.nextInt();
                 for (int i=1; i<=n; i++){
                     System.out.println(i);
@@ -85,6 +86,7 @@ public class JavaDia3 {
                 break;
                 
             case "2"://programa para imprimir todos los números naturales en orden inverso.
+                System.out.println("Ingrese un numero:");
                 int nu =teclado.nextInt();
                 
                 while (nu!=0){
@@ -114,6 +116,7 @@ public class JavaDia3 {
                 
                 
             case "5"://programa para imprimir todas las letras del alfabeto de la 'a' a la 'z'.
+                System.out.println("letras del alfabeto de la 'a' a la 'z'");
                 String [] letras={"A","B","C","D","E","F", "G","H","I","J", "K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
                 for(int i=0;i<letras.length;i++){
                     System.out.println(letras[i]);
@@ -121,6 +124,7 @@ public class JavaDia3 {
                 break;
                 
             case "6"://programa para imprimir el alfabeto en orden inverso, de la 'Z' a la 'A'.
+                System.out.println("letras del alfabeto de la 'a' a la 'z' en orden inverso");
                 String [] letrass={"A","B","C","D","E","F", "G","H","I","J", "K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
                 int cant=letrass.length;
                 while (cant!=0){
@@ -130,6 +134,7 @@ public class JavaDia3 {
                 break;
                 
             case "7"://programa para imprimir todos los números pares entre 1 y 100.
+                System.out.println("Numeros pares entre 1 y 100");
                 for (int i=1; i<=100;i++){
                     
                     if (i%2==0){
@@ -140,6 +145,7 @@ public class JavaDia3 {
                 break;
                 
             case "8"://programa para imprimir todos los números impares entre 1 y 100.
+                System.out.println(" números impares entre 1 y 100");
                 for (int i=1; i<=100;i++){
                     
                     if (i%2!=0){
@@ -149,7 +155,7 @@ public class JavaDia3 {
                 break;
                 
             case "9"://programa para encontrar la suma de todos los números naturales entre 1 y n.
-                System.out.println("Ingrese n");
+                System.out.println("Ingrese un numero para encontrar la suma:");
                 int num=teclado.nextInt();
                 int total=0;
                 for (int i=1; i<=num;i++){
@@ -159,7 +165,7 @@ public class JavaDia3 {
                 System.out.println(total);
                 break;
             case "10"://programa para encontrar la suma de todos los números pares entre 1 y n.
-                System.out.println("Ingrese n");
+                System.out.println("Ingrese un numero para encontrar la suma:");
                 int nume=teclado.nextInt();
                 int total2=0;
                 for (int i=1; i<=nume;i++){
@@ -172,6 +178,7 @@ public class JavaDia3 {
                 break;
                 
             case "11"://Escribe un programa para encontrar la suma de todos los números impares entre 1 y n.
+                System.out.println("Ingrese un numero para encontrar la suma:");
                 int numer=teclado.nextInt();
                 int total3=0;
                 for (int i=1; i<=numer;i++){
@@ -183,6 +190,7 @@ public class JavaDia3 {
                 break;
                 
             case "12"://programa para imprimir los valores ASCII.
+                System.out.println("Los valores ASCII son:");
                 for (int i=0; i<=255; i++){
                     System.out.println(i + " Valores ASCII: "+ (char)i);
                 }

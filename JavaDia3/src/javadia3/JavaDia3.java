@@ -304,7 +304,7 @@ public class JavaDia3 {
                     
                     int Numero=Character.getNumericValue(dato);
                     int potencia=numeBinari.length()-1-i;
-                    decimal+= Numero*Math.pow(2, potencia);
+                    decimal+= Numero*potencia;
                 }
                 System.out.println("El numero en decimal es: "+ decimal);
                 
@@ -375,7 +375,65 @@ public class JavaDia3 {
                 System.out.println("El numero decimal "+ numee+" en binario es: "+ binario);
                 break;
                 
-            
+            case "30"://programa para convertir un número binario a octal.
+                System.out.println("Ingrese el numero binario que quieres convertir a octal:");
+                String numee6=teclado.nextLine();
+                String Octal5=Integer.toOctalString(Integer.parseInt(numee6, 2));
+                System.out.println("El numero decimal "+ numee6+" en octal es: "+ Octal5);
+                break;
+                
+            case "31"://programa para convertir un número binario a decimal.
+                System.out.println("Ingrese el numero que quieres convertir de binario a decimal");
+                String binaryNu=teclado.nextLine();
+                int decimalNumbb=Integer.parseUnsignedInt(binaryNu, 2);
+                System.out.println("El numero: "+ binaryNu+ " en decimal es: "+ decimalNumbb);
+                break;
+                
+            case "32"://programa para convertir un número binario a hexadecimal.
+                System.out.println("Ingrese el numero que quieres convertir de binario a hexadecimal");
+                String binary2=teclado.nextLine();
+                int decimalNumbb2=Integer.parseInt(binary2, 2);
+                String Hexadecimal3=Integer.toHexString(decimalNumbb2);
+                System.out.println("El numero: "+ binary2+ " en hexadecimal es: "+ Hexadecimal3);
+                break;
+                
+            case "33"://programa para convertir un número octal a binario.
+                System.out.println("Ingrese el numero que quieres convertir de octal a binario");
+                String nuOctal2=teclado.nextLine();
+                String Binar=Integer.toBinaryString(Integer.parseInt(nuOctal2, 8));
+                System.out.println("El numero "+ nuOctal2+ " en binario "+ Binar);
+                break;
+                
+            case "34"://programa para convertir un número octal a decimal.
+                System.out.println("Ingrese el numero que quieres convertir de octal a binario");
+                String nuOctaal=teclado.nextLine();
+                int decimmal=Integer.parseInt(nuOctaal,8);
+                System.out.println("El numero "+ nuOctaal+ " en decimal es: "+ decimmal);
+                break;
+                
+            case "35"://programa para convertir un número octal a hexadecimal.
+                System.out.println("Ingrese el numero que quieres convertir de octal a binario");
+                String nuOctaal5=teclado.nextLine();
+                int decimmal5=Integer.parseInt(nuOctaal5,8);
+                String Hexadecimal5=Integer.toHexString(decimmal5);
+                System.out.println("El numero "+ nuOctaal5+ " en decimal es: "+ Hexadecimal5);
+                break;
+                
+            case "36"://programa para encontrar el complemento a 1 de un número en Java.
+                int nummee=teclado.nextInt();
+                System.out.println("El complemento es: "+ ~nummee);
+                break;
+                
+            case "37":
+                System.out.println("");
+                break;
+                
+            case "38"://programa para imprimir la serie de Fibonacci hasta n términos.
+                System.out.println("Ingrese n para imprimir la serie Fibonacci");
+                int nn=teclado.nextInt();
+                
+                break;
+
             case "45":
                 System.out.println("Ingrese un numero para sacar sus factores primos: ");
                 int numEntra=teclado.nextInt();
@@ -390,6 +448,8 @@ public class JavaDia3 {
                     numm++;
                 }
                 break;
+                
+            default: System.out.println("opcion invalida");
        
                 
         }

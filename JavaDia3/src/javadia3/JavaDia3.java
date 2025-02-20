@@ -14,6 +14,59 @@ public class JavaDia3 {
             }
         return prod;
         }
+     public static int calcularComplA2(int numero){
+        int complementoA1=~numero;
+        int complementoA2= complementoA1 + 1;
+        return complementoA2;
+    }
+    
+    public static boolean NumeroPerfectt(int numero){
+        if (numero<2){
+            return false;
+        }
+        int sumDivisorr=1;
+        for (int i=2; i<=numero/2; i++){
+            if (numero%i==0){
+                sumDivisorr+=i;
+            }
+        }
+        return sumDivisorr==numero;
+    }
+    
+    public static boolean NumeroFuertes(int numeros){
+        int summa=0;
+        int guardar=numeros;
+        
+        while (guardar>0){
+            int digito=guardar% 10;
+            long factorialDigito=1;
+            for (int i=1;i<=digito; i++){
+                factorialDigito*=i;
+                
+            }
+            summa+=factorialDigito;
+            guardar/=10;
+        }
+        if(summa==numeros){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
+    public static boolean NumerosArmstrong(int numeros){
+        int num22=numeros;
+        int suma=0;
+        int tamano= String.valueOf(numeros).length();
+        while (numeros >0 ){
+            int digito=numeros % 10;
+            suma+=Math.pow(digito, tamano);
+            numeros/=10;
+            
+        }
+        return suma==num22;
+    }
 
     public static void main(String[] args) {
         // TODO code application logic here
@@ -385,7 +438,7 @@ public class JavaDia3 {
             case "31"://programa para convertir un número binario a decimal.
                 System.out.println("Ingrese el numero que quieres convertir de binario a decimal");
                 String binaryNu=teclado.nextLine();
-                int decimalNumbb=Integer.parseUnsignedInt(binaryNu, 2);
+                int decimalNumbb=Integer.parseInt(binaryNu, 2);
                 System.out.println("El numero: "+ binaryNu+ " en decimal es: "+ decimalNumbb);
                 break;
                 
@@ -425,14 +478,82 @@ public class JavaDia3 {
                 break;
                 
             case "37":
-                System.out.println("");
+                System.out.println("Ingrese el numero al cual deseas encontrar el complemento a2");
+                String binarioo=teclado.nextLine();
+                int nuumero=Integer.parseInt(binarioo,2);
+                int complementoA1=~nuumero;
+               
+                
+                int complemA2= complementoA1 + 1;;
+                String resultaddd=Integer.toBinaryString(complemA2);
+                System.out.println("El complemento de "+ binarioo+" es: "+ resultaddd);
                 break;
                 
             case "38"://programa para imprimir la serie de Fibonacci hasta n términos.
                 System.out.println("Ingrese n para imprimir la serie Fibonacci");
                 int nn=teclado.nextInt();
+                int a=0;
+                int b=1;
+                for (int i=1; i<=nn; i++){
+                    System.out.println(a+"");
+                    int resultaaa = a+b;
+                    a=b;
+                    b=resultaaa;
                 
+                }
                 break;
+                
+            
+                
+            case "40"://programa para imprimir todos los Números Fuertes del 1 al 100000.
+                System.out.println("Los numeros fuertes ");
+                for (int i=1; i<100000; i++){
+                    if(NumeroFuertes(i)==true){
+                        System.out.println(i);
+                    }
+                }
+                break;
+                
+                
+            case "41"://programa para imprimir todos los Números Perfectos del 1 al 10000.
+                System.out.println("Los numeros perfectos del 1 al 100000");
+                for (int i=1; i<=100000; i++){
+                    if (NumeroPerfectt(i)){
+                        System.out.println(i);
+                    }
+                }
+                break;
+            case "42": //programa para verificar si un número es un Número Perfecto o no.
+                System.out.println("Ingrese el numero que quieres verificar si es perfecto:");
+                int datic=teclado.nextInt();
+                if (NumeroPerfectt(datic)){
+                        System.out.println("El numero "+ datic + " es perfecto");
+                }
+                else{
+                    System.out.println("El numero no es perfecto");
+                }
+               
+                break;
+                
+            case "43":
+                System.out.println("Los numeros Armstrong son: ");
+                for (int i =1; i<=1000; i++){
+                    if (NumerosArmstrong(i)){
+                        System.out.println(i);
+                    }
+                }
+                
+            case "44"://programa para verificar si un número es un Número de Armstrong o no.
+                System.out.println("Ingrese el numero que quieres verificar si es Armstrong");
+                int nuArm=teclado.nextInt();
+                if (NumerosArmstrong(nuArm)){
+                        System.out.println("El numero "+ nuArm + " es Armstrong");
+                }
+                else{
+                    System.out.println("El numero no es Armstrong");
+                }
+                
+                
 
             case "45":
                 System.out.println("Ingrese un numero para sacar sus factores primos: ");
